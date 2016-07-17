@@ -1,7 +1,9 @@
-import menu from './menu'
-import sidebar from './sidebar'
+import menu from './menu';
+import sidebar from './sidebar';
+import routerSettings from './router';
 
 export default {
   menu,
-  sidebar
-}
+  sidebar,
+  routerSettings
+};

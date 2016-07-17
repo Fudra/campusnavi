@@ -18,11 +18,11 @@
 </template>
 
 <script type="text/babel">
-import store from './vuex/store'
-import Navbar from './components/Navbar'
-import Sidebar from './components/Sidebar'
-import Levelbar from './components/Levelbar'
-import FooterBar from './components/FooterBar'
+import store from './vuex/store';
+import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Levelbar from './components/Levelbar';
+import FooterBar from './components/FooterBar';
 
 export default {
   store,
@@ -39,7 +39,8 @@ export default {
     Levelbar,
     FooterBar
   }
-}
+};
+
 </script>
 
 <style lang="scss" rel="stylesheet/scss">

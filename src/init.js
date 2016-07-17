@@ -15,4 +15,4 @@ export default (config) => {
   document.addEventListener('visibilitychange', handler);
   window.addEventListener('DOMContentLoaded', handler);
   window.addEventListener('resize', handler);
-}
+};

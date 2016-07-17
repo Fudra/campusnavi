@@ -21,10 +21,10 @@
   </footer>
 </template>
 
-<script>
+<script type="text/babel">
 </script>
 
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
 .footer {
   .social a {
     border-bottom: none !important;

@@ -21,8 +21,8 @@
   </aside>
 </template>
 
-<script>
-let count = 0
+<script type="text/babel">
+let count = 0;
 
 export default {
   vuex: {
@@ -36,46 +36,46 @@ export default {
     return {
       steps: this.menu.filter(i => !!i.subMenu).length,
       isReady: false
-    }
+    };
   },
 
   ready () {
-    this.isReady = true
+    this.isReady = true;
   },
 
   methods: {
     toggle (item, $e) {
       if (this.hasCollapse(item)) {
-        $e.preventDefault()
-        item.expanded = !item.expanded
+        $e.preventDefault();
+        item.expanded = !item.expanded;
       } else {
-        this.autoClose()
+        this.autoClose();
       }
     },
 
     hasCollapse (item) {
-      return !!item.subMenu
+      return !!item.subMenu;
     },
 
     isExpanded (item) {
-      let hasCollapse = this.hasCollapse(item)
-      if (!hasCollapse) return
+      let hasCollapse = this.hasCollapse(item);
+      if (!hasCollapse) return;
       if (count < this.steps) {
-        count++
-        item.expanded = !!(item.subMenu.filter(i => i.link === this.$route.name).length)
+        count++;
+        item.expanded = !!(item.subMenu.filter(i => i.link === this.$route.name).length);
       }
-      return this.isReady & item.expanded
+      return this.isReady & item.expanded;
     },
 
     autoClose () {
-      this.sidebar.isMobile && (this.sidebar.opened = false)
+      this.sidebar.isMobile && (this.sidebar.opened = false);
     }
   }
 
-}
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss">
 @import '~bulma/sass/utilities/variables';
 @import '~bulma/sass/utilities/mixins';
 

@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-import config from '../config'
+import config from '../config';
 
-const { menu, sidebar } = config
+const { menu, sidebar } = config;
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const store = new Vuex.Store({
 
@@ -17,6 +17,6 @@ const store = new Vuex.Store({
   mutations: {
 
   }
-})
+});
 
-export default store
+export default store;

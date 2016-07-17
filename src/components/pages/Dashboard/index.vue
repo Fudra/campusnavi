@@ -105,8 +105,8 @@
   </div>
 </template>
 
-<script>
-import Chart from 'vue-bulma-chartjs'
+<script type="text/babel">
+import Chart from 'vue-bulma-chartjs';
 
 export default {
   components: {
@@ -116,7 +116,7 @@ export default {
   data () {
     return {
       data: [300, 50, 100]
-    }
+    };
   },
 
   computed: {
@@ -135,7 +135,7 @@ export default {
             '#FFCE56'
           ]
         }]
-      }
+      };
     }
   },
 
@@ -144,11 +144,12 @@ export default {
       // https://vuejs.org/guide/list.html#Mutation-Methods
       // this.data.unshift(this.data.pop())
       this.data.forEach((item, i) => {
-        this.data.$set(i, Math.ceil(Math.random() * 1000))
-      })
-    }, 1024)
+        this.data.$set(i, Math.ceil(Math.random() * 1000));
+      });
+    }, 1024);
   }
-}
+};
+
 </script>
 
 <style lang="scss" scoped>

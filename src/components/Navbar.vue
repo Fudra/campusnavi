@@ -11,7 +11,7 @@
         </div>
         <div class="nav-center">
           <a class="nav-item hero-brand touchable" href="#">
-            <img src="../assets/logo.svg" alt="Vue Admin Panel Framework">
+            <img src="../assets/logo.svg" alt="Campusnavi">
             <div class="is-hidden-mobile">
               <span class="vue">Vue</span><strong class="admin">Admin</strong>
             </div>
@@ -23,7 +23,7 @@
   </section>
 </template>
 
-<script>
+<script type="text/babel">
 export default {
   vuex: {
     getters: {
@@ -33,13 +33,13 @@ export default {
 
   methods: {
     toggleSidebar () {
-      this.sidebar.opened = !this.sidebar.opened
+      this.sidebar.opened = !this.sidebar.opened;
     }
   }
-}
+};
 </script>
 
-<style lang="scss">
+<style lang="scss" rel="stylesheet/scss" >
 @import '~bulma/sass/utilities/variables';
 
 .app-navbar {
