@@ -13,6 +13,12 @@ import Router from 'vue-router';
 import Resource from 'vue-resource';
 import './transitions';
 
+/**
+ * debugging
+ * @type {boolean}
+ */
+Vue.config.debug = true;
+
 Vue.use(Router);
 Vue.use(Resource);
 
