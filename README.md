@@ -35,6 +35,11 @@ npm test
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+## Guide for developers 
+
+A guide for developers, how to work on this project, manage assets and develop new features can be found [here](doc/guide).
+This guide is fully german.
+
 
 [Vue]: http://vuejs.org
 [Bulma]: http://bulma.io
