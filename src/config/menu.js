@@ -3,6 +3,11 @@ export default [
     link: 'Dashboard',
     label: 'Dashboard',
     icon: 'fa-tachometer'
+  },
+  {
+   // link: 'Chart',
+    label: 'Chart',
+    icon: 'fa-bar-chart-o'
   }
   // {
   //   label: 'Charts',

@@ -3,10 +3,10 @@
     <ul class="menu-list">
       <li v-for="item in menu">
         <a class="touchable" v-link="{ name: item.link }" @click="toggle(item, $event)" :aria-expanded="isExpanded(item) ? 'true' : 'false'">
-          <span class="icon is-small" v-if="item.icon">
-            <i :class="['fa', item.icon]"></i>
+          <span class="icon" v-if="item.icon">
+            <i :class="['fa', item.icon]" title="{{ item.label }}" ></i>
           </span>
-          <span>{{ item.label }}</span>
+
           <span class="icon is-small is-angle" v-if="item.subMenu">
             <i class="fa fa-angle-down"></i>
           </span>
@@ -78,6 +78,7 @@ export default {
 <style lang="scss" rel="stylesheet/scss">
 @import '~bulma/sass/utilities/variables';
 @import '~bulma/sass/utilities/mixins';
+@import '../scss/base/variables';
 
 .app-sidebar {
   position: fixed;
@@ -85,12 +86,12 @@ export default {
   left: 0;
   bottom: 0;
   padding: 20px 0px 50px;
-  width: 180px;
+  width: 60px;
   min-width: 45px;
   max-height: 100vh;
   height: 100%;
   z-index: 1024 - 1;
-  background: #FFF;
+  background: $sidebar-background;
   box-shadow: 0 2px 3px rgba(17, 17, 17, 0.1), 0 0 0 1px rgba(17, 17, 17, 0.1);
   overflow-y: auto;
   overflow-x: hidden;
@@ -121,6 +122,10 @@ export default {
   }
 
   .menu-list li a {
+    transition: $transition-all;
+    padding-top:10px;
+    padding-bottom:10px;
+
     position: relative;
     white-space: nowrap;
 
@@ -128,6 +133,20 @@ export default {
       position: absolute;
       right: 10px;
       transition: transform .377s ease;
+    }
+
+    &.is-active {
+      color: $sidebar-icon-active;
+      background: $sidebar-icon-active-background;
+    }
+
+    &:hover {
+      color: $sidebar-icon-hover;
+      background: transparent;
+    }
+
+    &.is-active:hover {
+      background: $sidebar-icon-active-background;
     }
 
     &[aria-expanded="true"] {
@@ -154,6 +173,13 @@ export default {
     > li:last-child {
       padding-bottom: 10px;
     }
+  }
+
+  .icon {
+    font-size: 35px;
+    height: 35px;
+    line-height: 33px;
+    width: 35px;
   }
 
 }
