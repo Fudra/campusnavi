@@ -1,0 +1,49 @@
+$color-outer-space: #2E3837;
+$color-ironside-gray: #696962;
+$color-blumine: #166779;
+$color-casal: #2d5561;
+$color-neptune: #7DB9B3;
+$color-catskill-white: #E2F1F1;
+$color-black-squeeze: #F1F9FA;
+
+$color-forest-green: #1A9138;
+$color-bay-of-many: #2E4290;
+$color-kumera: #826F25;
+$color-falu-red: #861419;
+
+/* States */
+$state-success: $color-forest-green;
+$state-information: $color-bay-of-many;
+$state-warning: $color-kumera;
+$state-error: $color-falu-red;
+
+/* Navbar */
+
+$navbar-border-bottom: 4px solid $color-casal;
+
+/* sidebar */
+
+$sidebar-background: $color-casal;
+
+$sidebar-icon-color: rgba($color-black-squeeze,.4);
+$sidebar-icon-hover: $color-black-squeeze;
+$sidebar-icon-active-background: $color-outer-space;
+$sidebar-icon-active: $color-black-squeeze;
+
+
+/* background */
+$container-background-color: $color-black-squeeze;
+
+/* font */
+
+$font-user-name-size: 20px;
+$font-user-name-color: $color-casal;
+
+$font-user-role-size: 15px;
+$font-user-role-color: $color-ironside-gray;
+$font-user-role-weight: 300;
+
+
+/* transition */
+
+$transition-all: all 250ms ease-in-out

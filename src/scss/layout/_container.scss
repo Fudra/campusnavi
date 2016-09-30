@@ -1,0 +1,12 @@
+
+@import '../base/variables';
+
+#app {
+  .app-main {
+    padding-top:60px;
+    background: $container-background-color;
+  }
+  .app-content {
+    padding: 10px 60px;
+  }
+}
