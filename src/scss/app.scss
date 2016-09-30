@@ -1,18 +1,15 @@
 @import '~bulma';
-
 @import '~animate.css';
+@import '~nprogress/nprogress';
 
 $fa-font-path: '~font-awesome/fonts/';
 @import '~font-awesome/scss/font-awesome';
 
-@import '~nprogress/nprogress';
-@import './nprogress';
+//http://sass-guidelin.es/#architecture
 
-// https://developers.google.com/web/updates/2013/12/300ms-tap-delay-gone-away
-html {
-  touch-action: manipulation;
-}
-
-.touchable {
-  -webkit-tap-highlight-color: transparent;
-}
+@import "base/base";
+@import "components/components";
+@import "layout/layout";
+@import "pages/pages";
+//@import "themes/themes";
+@import "abstracts/abstracts";

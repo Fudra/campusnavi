@@ -3,7 +3,7 @@
     <div class="level-left">
       <div class="level-item">
         <h3 class="subtitle is-5">
-          <strong>{{ name }}</strong>
+          <span>{{ name }}</span>
         </h3>
       </div>
     </div>
@@ -85,4 +85,14 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
+
+  .level-item {
+      padding: 40px 0;
+  }
+
+  .subtitle span {
+    font-size:40px;
+    font-weight: 200;
+  }
+
 </style>
