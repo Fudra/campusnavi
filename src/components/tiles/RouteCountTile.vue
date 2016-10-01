@@ -1,9 +1,9 @@
 <template>
     <article class="tile is-child box">
-        <p class="title">Aufgaben</p>
-        <p class="emphasize">{{tasks.count}}</p>
+        <p class="title">Routen</p>
+        <p class="emphasize">{{routes.count}}</p>
         <div class="content center">
-            <p>zum <br> erkunden</p>
+            <p>verfügbar</p>
         </div>
     </article>
 </template>
@@ -11,21 +11,21 @@
 <script type="text/babel">
     import store from '../../store/tiles';
 
-    let tasks = 0;
+    let routes = 0;
 
     export default {
         data () {
             return {
-                tasks
+                routes
             }
         },
         ready () {
-            store.getTaskData()
+            store.getRouteData()
                 .then(
-                        tasks => {
-                            this.tasks = tasks;
+                        routes => {
+                            this.routes = routes;
                         }
                 )
         }
-    }
+    };
 </script>
