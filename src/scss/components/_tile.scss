@@ -1,5 +1,36 @@
+@import "../base/variables";
+
 .tile {
   &.is-parent {
 
-}
+  }
+
+  &.box {
+    border-radius: 0;
+    background: $tile-background;
+    color: $tile-color;
+  }
+
+  .tile {
+    font-size: 15pt;
+    font-weight: 500;
+
+    .center{
+      text-align: center;
+    }
+
+    .emphasize {
+      font-size: 59pt;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      color: $tile-emphasize-color;
+      text-align: center;
+    }
+  }
+  .title {
+    text-align: center;
+    font-size: 16pt;
+    font-weight: 600;
+    color: $tile-title-color;
+  }
 }
