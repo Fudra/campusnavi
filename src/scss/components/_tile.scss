@@ -15,6 +15,30 @@
     font-size: 15pt;
     font-weight: 500;
 
+    &.is-main {
+      padding: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
+      }
+
+      .title {
+        background: $tile-main-title-background;
+        color: rgba($tile-main-title-color, .8);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20pt;
+        transition: $transition-all;
+
+        &:hover {
+          color: rgba($tile-main-title-color, 1);
+        }
+      }
+    }
+
     .center{
       text-align: center;
     }

@@ -1,74 +1,35 @@
 <template>
     <div>
         <div class="tile is-ancestor">
-            <div class="tile is-parent">
-                <!--<info-tile :text="Hallo World"></info-tile>-->
+            <div class="tile is-parent is-3">
+                <main-tile :data="positionMainData"></main-tile>
             </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <p class="title">Two</p>
-                    <p class="subtitle">Subtitle</p>
-                </article>
+            <div class="tile is-parent is-3">
+                <main-tile :data="infoMainData"></main-tile>
             </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <p class="title">Three</p>
-                    <p class="subtitle">Subtitle</p>
-                </article>
+            <div class="tile is-parent is-3">
+                <main-tile :data="routeMainData"></main-tile>
             </div>
-            <div class="tile is-parent">
-                <article class="tile is-child box">
-                    <p class="title">Four</p>
-                    <p class="subtitle">Subtitle</p>
-                </article>
+            <div class="tile is-parent is-3">
+                <main-tile :data="taskMainData"></main-tile>
             </div>
         </div>
-
-        <!--<div class="tile is-ancestor">-->
-        <!--<div class="tile is-parent">-->
-        <!--<article class="tile is-child box">-->
-        <!--<h4 class="title">Five</h4>-->
-        <!--<div class="content">-->
-        <!--<chart :type="'doughnut'" :data="chartData"></chart>-->
-        <!--</div>-->
-        <!--</article>-->
-        <!--</div>-->
-        <!--<div class="tile is-parent">-->
-        <!--<article class="tile is-child box">-->
-        <!--<h4 class="title">Six</h4>-->
-        <!--<div class="content">-->
-        <!--<chart :type="'pie'" :data="chartData"></chart>-->
-        <!--</div>-->
-        <!--</article>-->
-        <!--</div>-->
-        <!--</div>-->
 
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-9">
                 <div class="tile">
                     <div class="tile is-parent">
-                        <info-tile :data="taskData"></info-tile>
+                        <info-tile :data="taskInfoData"></info-tile>
                     </div>
 
                     <div class="tile is-parent">
-                        <info-tile :data="routesData"></info-tile>
+                        <info-tile :data="routesInfoData"></info-tile>
                     </div>
 
                     <div class="tile is-parent">
-                        <info-tile :data="positionData"></info-tile>
+                        <info-tile :data="positionInfoData"></info-tile>
                     </div>
 
-                    <!--<div class="tile is-8 is-parent">-->
-                    <!--<article class="tile is-child box">-->
-                    <!--<p class="title">Eight</p>-->
-                    <!--<p class="subtitle">Subtitle</p>-->
-                    <!--<div class="content">-->
-                    <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu-->
-                    <!--pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis-->
-                    <!--feugiat facilisis.</p>-->
-                    <!--</div>-->
-                    <!--</article>-->
-                    <!--</div>-->
                 </div>
                 <!-- Config -->
                 <div class="tile">
@@ -83,13 +44,12 @@
 
             <!--/ Config -->
             <div class="tile is-parent">
+                <!--<overview-tile :chart-data="chartData" :title="'Aufgabenübersicht'"></overview-tile>-->
                 <article class="tile is-child box">
                     <div class="content">
                         <p class="title">Aufgabenübersicht</p>
                         <div class="content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat
-                                pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida
-                                libero rhoncus ut..</p>
+                            <chart :type="'pie'" :data="chartData" :options="chartOptions"></chart>
                         </div>
                     </div>
                 </article>
@@ -102,13 +62,17 @@
     import Chart from 'vue-bulma-chartjs';
     import InfoTile from '../../tiles/InfoTile';
     import SettingTile from '../../tiles/ConfigTile';
+    import OverviewTile from '../../tiles/OverviewTile';
+    import MainTile from '../../tiles/MainTile';
     import store from '../../../store/tiles';
 
     export default {
         components: {
             Chart,
             InfoTile,
-            SettingTile
+            SettingTile,
+            OverviewTile,
+            MainTile
         },
 
         data () {
@@ -121,6 +85,43 @@
         },
 
         computed: {
+            // Main tiles
+            positionMainData () {
+                return {
+                    title: 'Position',
+                    img: 'http://fillmurray.com/300/300',
+                    url: '#',
+                    tooltip: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
+                }
+            },
+
+            routeMainData () {
+                return {
+                    title: 'Routen',
+                    img: 'http://fillmurray.com/300/300',
+                    url: '#',
+                    tooltip: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
+                }
+            },
+
+            infoMainData () {
+                return {
+                    title: 'Info',
+                    img: 'http://fillmurray.com/300/300',
+                    url: '#',
+                    tooltip: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
+                }
+            },
+
+            taskMainData () {
+                return {
+                    title: 'Aufgaben',
+                    img: 'http://fillmurray.com/300/300',
+                    url: '#',
+                    tooltip: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
+                }
+            },
+
             // config tiles
             configTileData () {
                 return {
@@ -143,7 +144,7 @@
             },
 
 //            Info Tiles
-            taskData () {
+            taskInfoData () {
                 return {
                     title: 'Aufgaben',
                     count: Math.ceil(Math.random() * 200),
@@ -151,7 +152,7 @@
                 }
             },
 
-            positionData () {
+            positionInfoData () {
                 return {
                     title: 'Positionen',
                     count: Math.ceil(Math.random() * 100),
@@ -159,7 +160,7 @@
                 }
             },
 
-            routesData () {
+            routesInfoData () {
                 return {
                     title: 'Routes',
                     count: Math.ceil(Math.random() * 150),
@@ -186,6 +187,18 @@
                         }
                     ]
                 };
+            },
+            chartOptions () {
+                return {
+                    legend: {
+                        position: 'right'
+                    },
+                    elements: {
+                        arc: {
+                            borderColor: 'transparent'
+                        }
+                    }
+                }
             }
         },
 

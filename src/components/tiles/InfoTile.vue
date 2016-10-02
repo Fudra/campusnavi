@@ -25,13 +25,13 @@
             }
         },
         watch: {
-            data (val) {
-                this.$nextTick(
-                    () => {
-                        this.values.count = val.count;
-                    }
-                )
-            }
+//            data (val) {
+//                this.$nextTick(
+//                    () => {
+//                        this.values.count = val.count;
+//                    }
+//                )
+//            }
         }
     };
 </script>
