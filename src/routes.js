@@ -13,6 +13,10 @@ export const routes = {
    '/dashboard': {
       name: 'Dashboard',
       component: lazyLoading('./components/pages/Dashboard/index')
+   },
+   '/position': {
+      name: 'Position',
+      component: lazyLoading('./components/pages/Position/index')
    }
    // '/charts/chartJs': {
    //    name: 'ChartJs',

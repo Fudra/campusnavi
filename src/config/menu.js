@@ -5,9 +5,9 @@ export default [
     icon: 'fa-tachometer'
   },
   {
-   // link: 'Chart',
-    label: 'Chart',
-    icon: 'fa-bar-chart-o'
+    link: 'Position',
+    label: 'Position',
+    icon: 'fa-thumb-tack'
   }
   // {
   //   label: 'Charts',
