@@ -18,15 +18,15 @@
         <div class="tile is-ancestor">
             <div class="tile is-vertical is-9">
                 <div class="tile">
-                    <div class="tile is-parent">
+                    <div class="tile is-parent is-4">
                         <info-tile :data="taskInfoData"></info-tile>
                     </div>
 
-                    <div class="tile is-parent">
+                    <div class="tile is-parent is-4">
                         <info-tile :data="routesInfoData"></info-tile>
                     </div>
 
-                    <div class="tile is-parent">
+                    <div class="tile is-parent is-4">
                         <info-tile :data="positionInfoData"></info-tile>
                     </div>
 
