@@ -48,7 +48,6 @@
                 <div class="tile">
                     <div class="tile is-parent">
                         <info-tile :data="taskData"></info-tile>
-                        <!--<task-count-tile></task-count-tile>-->
                     </div>
 
                     <div class="tile is-parent">
@@ -102,9 +101,6 @@
 <script type="text/babel">
     import Chart from 'vue-bulma-chartjs';
     import InfoTile from '../../tiles/InfoTile';
-    import TaskCountTile from '../../tiles/TaksCountTile';
-    import RouteCountTile from '../../tiles/RouteCountTile';
-    import PositionCountTile from '../../tiles/PositionCountTile';
     import SettingTile from '../../tiles/ConfigTile';
     import store from '../../../store/tiles';
 
@@ -112,9 +108,6 @@
         components: {
             Chart,
             InfoTile,
-            TaskCountTile,
-            RouteCountTile,
-            PositionCountTile,
             SettingTile
         },
 
@@ -128,6 +121,7 @@
         },
 
         computed: {
+            // config tiles
             configTileData () {
                 return {
                     icon: 'fa-gear',
@@ -148,6 +142,7 @@
                 }
             },
 
+//            Info Tiles
             taskData () {
                 return {
                     title: 'Aufgaben',
@@ -172,6 +167,7 @@
                 }
             },
 
+            // chart data
             chartData () {
                 return {
                     labels: [
