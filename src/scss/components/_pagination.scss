@@ -1,0 +1,11 @@
+@import "../base/variables";
+
+.pagination {
+  .button {
+    background-color: transparent;
+
+    &.is-primary {
+      background-color: $pagination-hover;
+    }
+  }
+}

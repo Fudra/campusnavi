@@ -1,0 +1,33 @@
+@import "../base/variables";
+
+.input,
+.textarea {
+  border-radius: 0;
+  font-size: 16px;
+  height: 35px;
+  line-height: 26px;
+  //border-color: $input-border;
+
+  &:focus {
+    border-color: $input-focus;
+  }
+}
+
+.control{
+  &.has-icon {
+
+    .input{
+      + .fa{
+        position: absolute;
+        top: 6px;
+        border-left: 1px solid #d3d6db;
+      }
+
+      &:focus {
+       + .fa{
+         color: $input-focus;
+       }
+      }
+    }
+  }
+}

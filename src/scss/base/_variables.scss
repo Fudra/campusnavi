@@ -43,7 +43,9 @@ $font-user-role-size: 15px;
 $font-user-role-color: $color-ironside-gray;
 $font-user-role-weight: 300;
 
-
+/* input */
+$input-focus: $color-casal;
+$input-border: rgba($color-ironside-gray, .8);
 
 /* tiles */
 $tile-background: $color-catskill-white;
@@ -53,6 +55,18 @@ $tile-emphasize-color:$color-casal;
 $tile-secondary-header-color: $color-ironside-gray;
 $tile-main-title-background: $color-casal;
 $tile-main-title-color: $color-catskill-white;
+
+/* pagination */
+$pagination-button: rgba($color-ironside-gray, .6);
+$pagination-hover: $color-casal;
+
+/* table */
+$table-icon-menu: rgba($color-ironside-gray,.8);
+$table-icon-menu-active: rgba($color-ironside-gray,1);
+$table-icon-status-inactive: rgba($color-casal, .2);
+$table-icon-status-active: rgba($color-casal, 1);
+$table-hover: rgba($color-neptune, .2);
+$table-color:$color-casal;
 
 /* transition */
 

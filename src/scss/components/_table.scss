@@ -1,0 +1,32 @@
+@import '../base/variables';
+
+.table {
+  background-color: transparent;
+
+  td {
+    border: 0;
+
+    &.is-icon {
+      a {
+        color: $table-icon-menu;
+
+        &:hover {
+        }
+      }
+    }
+
+    &.is-status {
+      color: $table-icon-status-inactive;
+      .active {
+        color: $table-icon-status-active;
+      }
+    }
+  }
+
+  tr {
+    &:hover {
+      background-color: $table-hover;
+    }
+  }
+
+}
