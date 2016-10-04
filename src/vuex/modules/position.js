@@ -11,12 +11,12 @@ const state = {
 const mutations = {
    [SEARCH_ITEM] (state, value) {
       state.search = value;
-      console.log('Debug: SEARCH_ITEM' + state.search);
+      console.log('Debug: SEARCH_ITEM ' + state.search);
    },
 
    [COUNT_ITEMS] (state, value) {
       state.itemCount = value;
-      console.log('Debug: COUNT_ITEMS' + state.itemCount);
+      console.log('Debug: COUNT_ITEMS ' + state.itemCount);
    }
 };
 
