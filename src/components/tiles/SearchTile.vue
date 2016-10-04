@@ -3,12 +3,10 @@
         <div class="title text-left">{{title}}</div>
         <div class="content">
             <p class="control has-icon has-icon-right">
-                <input v-model="thisMessage" class="input" type="text" placeholder="Suchen.." value="">
+                <input v-model="thisMessage" class="input" type="text" :placeholder="placeholder" value="">
                 <i :class="['fa', icon]"></i>
                 <!--<span class="help is-danger">This email is invalid</span>-->
             </p>
-
-           <p>dump: {{message}}</p>
         </div>
     </article>
 </template>
@@ -29,6 +27,12 @@
                type: String,
                default () {
                    return 'fa-search';
+               }
+           },
+           placeholder: {
+               type: String,
+               default () {
+                   return 'Suche..'
                }
            }
        },

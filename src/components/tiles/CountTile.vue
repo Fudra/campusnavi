@@ -25,7 +25,6 @@
             }
         },
         created () {
-            console.log('count: ' + this.count);
         }
     }
 </script>

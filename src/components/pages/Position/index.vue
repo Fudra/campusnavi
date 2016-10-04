@@ -37,7 +37,6 @@
     import ConfigTile from '../../tiles/ConfigTile';
     import PaginationTile from '../../tiles/PaginationTile';
     import TableTile from './Table';
-    import vuex from '../../../vuex/store';
     import store from '../../../store/position';
 
     import { countItems } from '../../../vuex/actions'
@@ -57,7 +56,6 @@
                 data: {}
             }
         },
-        store: vuex,
 
         vuex: {
             actions: {
