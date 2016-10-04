@@ -50,11 +50,11 @@
             data: {
                 type: Object,
                 default () {
-                    return {}
+                    return {};
                 }
             }
         }
-    }
+    };
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>

@@ -22,7 +22,7 @@
         data () {
             return {
                 values: null
-            }
+            };
         },
         watch: {
 //            data (val) {

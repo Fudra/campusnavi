@@ -31,10 +31,6 @@
         },
 
         ready () {
-            console.log(this.data);
-//            this.icon = this.data.icon | 'fa-heart';
-//            this.link = this.data.link | '#';
-//            this.info = this.data.info | {};
         },
 
         data () {
@@ -42,7 +38,7 @@
                 link: '',
                 icon: '',
                 info: {}
-            }
+            };
         }
-    }
+    };
 </script>

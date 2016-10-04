@@ -92,7 +92,7 @@
                     img: 'http://fillmurray.com/300/300',
                     url: '#',
                     tooltip: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-                }
+                };
             },
 
             routeMainData () {
@@ -101,7 +101,7 @@
                     img: 'http://fillmurray.com/300/300',
                     url: '#',
                     tooltip: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-                }
+                };
             },
 
             infoMainData () {
@@ -110,7 +110,7 @@
                     img: 'http://fillmurray.com/300/300',
                     url: '#',
                     tooltip: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-                }
+                };
             },
 
             taskMainData () {
@@ -119,7 +119,7 @@
                     img: 'http://fillmurray.com/300/300',
                     url: '#',
                     tooltip: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.'
-                }
+                };
             },
 
             // config tiles
@@ -128,7 +128,7 @@
                     icon: 'fa-gear',
                     link: '#',
                     info: {}
-                }
+                };
             },
 
             configUserData () {
@@ -140,7 +140,7 @@
                         count: '20',
                         text: 'Benutzer verfügbar'
                     }
-                }
+                };
             },
 
 //            Info Tiles
@@ -149,7 +149,7 @@
                     title: 'Aufgaben',
                     count: Math.ceil(Math.random() * 200),
                     text: 'zum <br> erkunden'
-                }
+                };
             },
 
             positionInfoData () {
@@ -157,7 +157,7 @@
                     title: 'Positionen',
                     count: Math.ceil(Math.random() * 100),
                     text: 'markiert'
-                }
+                };
             },
 
             routesInfoData () {
@@ -165,7 +165,7 @@
                     title: 'Routes',
                     count: Math.ceil(Math.random() * 150),
                     text: 'verfügbar'
-                }
+                };
             },
 
             // chart data
@@ -198,7 +198,7 @@
                             borderColor: 'transparent'
                         }
                     }
-                }
+                };
             }
         },
 
@@ -228,7 +228,7 @@
                        tasks => {
                          this.tasks = tasks;
                        }
-                   )
+                   );
               }
            }
     };

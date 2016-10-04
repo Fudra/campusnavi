@@ -28,11 +28,11 @@
                 type: String,
                 required: true,
                 default () {
-                    return 'No value provided'
+                    return 'No value provided';
                 }
             }
         }
-    }
+    };
 
 </script>
 

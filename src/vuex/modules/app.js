@@ -1,7 +1,7 @@
 import {
    COUNT_ITEMS,
    SEARCH_ITEM
-} from '../mutation-types'
+} from '../mutation-types';
 
 const state = {
    search: '',
@@ -11,16 +11,14 @@ const state = {
 const mutations = {
    [SEARCH_ITEM] (state, value) {
       state.search = value;
-      console.log('Debug: SEARCH_ITEM ' + state.search);
    },
 
    [COUNT_ITEMS] (state, value) {
       state.itemCount = value;
-      console.log('Debug: COUNT_ITEMS ' + state.itemCount);
    }
 };
 
 export default {
    state,
    mutations
-}
+};

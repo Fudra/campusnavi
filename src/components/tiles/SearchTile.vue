@@ -12,8 +12,8 @@
 </template>
 
 <script type="text/babel">
-    import { searchItem } from '../../vuex/actions'
-    import { getSearchItem } from '../../vuex/getters'
+    import { searchItem } from '../../vuex/actions';
+    import { getSearchItem } from '../../vuex/getters';
 
    export default {
        props: {
@@ -32,7 +32,7 @@
            placeholder: {
                type: String,
                default () {
-                   return 'Suche..'
+                   return 'Suche..';
                }
            }
        },
@@ -47,12 +47,12 @@
        computed: {
            thisMessage: {
                get () {
-                   return this.message
+                   return this.message;
                },
                set (val) {
-                   this.updateMessage(val)
+                   this.updateMessage(val);
                }
            }
        }
-   }
+   };
 </script>

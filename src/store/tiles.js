@@ -11,7 +11,7 @@ tileData.getTaskData = () => {
             }
          );
       }
-   )
+   );
 };
 
 tileData.getRouteData = () => {
@@ -23,7 +23,7 @@ tileData.getRouteData = () => {
             }
          );
       }
-   )
+   );
 };
 
 tileData.getPositionData = () => {
@@ -35,6 +35,6 @@ tileData.getPositionData = () => {
             }
          );
       }
-   )
+   );
 };
 

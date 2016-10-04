@@ -7,7 +7,7 @@
 </template>
 
 <script type="text/babel">
-    import { getCountItems } from '../../vuex/getters'
+    import { getCountItems } from '../../vuex/getters';
 
     export default {
 //        props: {
@@ -26,5 +26,5 @@
         },
         created () {
         }
-    }
+    };
 </script>

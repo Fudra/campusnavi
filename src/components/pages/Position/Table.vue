@@ -5,17 +5,18 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Aktiv</th>
+                    <th><a @click="sortKey ='name'">Name</a></th>
+                    <th><a @click="sortKey ='active'">Aktiv</a></th>
                     <th></th>
                     <th></th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr v-for="item in data.data">
+                <!--| orderBy: sortKey-->
+                <tr v-for="item in data.data | filterBy searchValue in 'name' | orderBy sortKey | updateCount">
                     <td>{{item.name}}</td>
-                    <td class="is-status">
+                    <td :class="['is-status', item.active ? 'is-active' : '' ]">
                         <i class="fa fa-circle"></i>
                     </td>
                     <td class="is-icon">
@@ -42,22 +43,49 @@
 </template>
 
 <script type="text/babel">
-    import { getSearchItem } from '../../../vuex/getters'
+    import { getSearchItem } from '../../../vuex/getters';
+    import { countItems } from '../../../vuex/actions';
 
     export default {
+        data () {
+           return {
+               sortKey: ''
+           };
+        },
         props: {
             data: {
                 type: Object,
                 required: true,
                 default () {
-                    return {}
+                    return {};
                 }
             }
         },
         vuex: {
             getters: {
                 searchValue: getSearchItem
+            },
+            actions: {
+                updateItemCounter: countItems
+            }
+        },
+        computed: {
+            thisUpdateCounter: {
+                set (val) {
+                    this.updateItemCounter(val);
+                }
+            }
+        },
+        methods: {
+            dataCount () {
+
+            }
+        },
+        filters: {
+            updateCount: function (arr) {
+                this.thisUpdateCounter = arr.length;
+                return arr;
             }
         }
-    }
+    };
 </script>
