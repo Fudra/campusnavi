@@ -8,13 +8,13 @@
                 <search-tile></search-tile>
             </div>
             <div class="tile is-parent is-3">
-                <count-tile :count=30></count-tile>
+                <count-tile></count-tile>
             </div>
         </div>
 
         <div class="tile is-ancestor">
             <div class="tile is-parent is-12">
-                <table-tile></table-tile>
+                <table-tile :data="data"></table-tile>
             </div>
         </div>
 
@@ -36,7 +36,11 @@
     import SearchTile from '../../tiles/SearchTile';
     import ConfigTile from '../../tiles/ConfigTile';
     import PaginationTile from '../../tiles/PaginationTile';
-    import TableTile from './Table'
+    import TableTile from './Table';
+    import vuex from '../../../vuex/store';
+    import store from '../../../store/position';
+
+    import { countItems } from '../../../vuex/actions'
 
     export default {
         components: {
@@ -47,6 +51,20 @@
             PaginationTile,
             TableTile
         },
+
+        data () {
+            return {
+                data: {}
+            }
+        },
+        store: vuex,
+
+        vuex: {
+            actions: {
+                updateItemCounter: countItems
+            }
+        },
+
         computed: {
             configAddData () {
                 return {
@@ -55,16 +73,33 @@
                     info: {}
                 }
             },
+
             paginationData () {
                 return {}
-            }
-        },
-        methods: {}
-    }
+            },
 
+            thisUpdateCounter: {
+                set (val) {
+                    this.updateItemCounter(val)
+                }
+            }
+
+        },
+
+        created () {
+            store.getPositions()
+                .then(
+                    positions => {
+                        this.data = positions;
+                        this.thisUpdateCounter = positions.data.length;
+                    }
+                )
+        },
+
+        methods: {
+        }
+    }
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-
-
 </style>

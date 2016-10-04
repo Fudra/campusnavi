@@ -1,6 +1,7 @@
 <template>
     <article class="tile is-child box">
         <div class="content">
+            <p>Search: {{searchValue}}</p>
             <table class="table">
                 <thead>
                 <tr>
@@ -12,8 +13,8 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>Misty Abbott</td>
+                <tr v-for="item in data.data">
+                    <td>{{item.name}}</td>
                     <td class="is-status">
                         <i class="fa fa-circle"></i>
                     </td>
@@ -32,7 +33,6 @@
                             <i class="fa fa-trash"></i>
                         </a>
                     </td>
-
                 </tr>
 
                 </tbody>
@@ -42,5 +42,22 @@
 </template>
 
 <script type="text/babel">
-    export default {}
+    import { getSearchItem } from '../../../vuex/getters'
+
+    export default {
+        props: {
+            data: {
+                type: Object,
+                required: true,
+                default () {
+                    return {}
+                }
+            }
+        },
+        vuex: {
+            getters: {
+                searchValue: getSearchItem
+            }
+        }
+    }
 </script>

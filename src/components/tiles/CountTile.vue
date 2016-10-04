@@ -7,16 +7,25 @@
 </template>
 
 <script type="text/babel">
-    export default {
-        props: {
-            count: {
-               type: Number,
-                default () {
-                    return -1;
-                }
+    import { getCountItems } from '../../vuex/getters'
 
+    export default {
+//        props: {
+//            count: {
+//               type: Number,
+//                default () {
+//                    return -1;
+//                }
+//
+//            }
+//        },
+        vuex: {
+            getters: {
+                count: getCountItems
             }
+        },
+        created () {
+            console.log('count: ' + this.count);
         }
     }
-
 </script>
