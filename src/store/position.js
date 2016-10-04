@@ -7,11 +7,11 @@ positionData.getPositions = () => {
       data.push(
          {
             id: i,
-            name: i + ' lorem'
+            name: Math.round(Math.random() * 100),
+            active: Math.random() > 0.5
          }
-      )
+      );
    }
-   console.log('data' + data);
 
    return new Promise(
       (resolve, reject) => {
@@ -21,5 +21,5 @@ positionData.getPositions = () => {
             }
          );
       }
-   )
+   );
 };

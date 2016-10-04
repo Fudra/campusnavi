@@ -17,7 +17,7 @@
 
     &.is-status {
       color: $table-icon-status-inactive;
-      .active {
+      &.is-active {
         color: $table-icon-status-active;
       }
     }

@@ -39,8 +39,6 @@
     import TableTile from './Table';
     import store from '../../../store/position';
 
-    import { countItems } from '../../../vuex/actions'
-
     export default {
         components: {
             IconTile,
@@ -54,13 +52,7 @@
         data () {
             return {
                 data: {}
-            }
-        },
-
-        vuex: {
-            actions: {
-                updateItemCounter: countItems
-            }
+            };
         },
 
         computed: {
@@ -69,34 +61,25 @@
                     icon: 'fa-plus-circle',
                     link: '#',
                     info: {}
-                }
+                };
             },
 
             paginationData () {
-                return {}
-            },
-
-            thisUpdateCounter: {
-                set (val) {
-                    this.updateItemCounter(val)
-                }
+                return {};
             }
-
         },
-
         created () {
             store.getPositions()
                 .then(
                     positions => {
                         this.data = positions;
-                        this.thisUpdateCounter = positions.data.length;
                     }
-                )
+                );
         },
 
         methods: {
         }
-    }
+    };
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
