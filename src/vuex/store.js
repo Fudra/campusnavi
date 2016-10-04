@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-// import app from './modules/app';
-import position from './modules/position';
-
+import app from './modules/app';
 
 import config from './../config';
 
@@ -22,11 +20,10 @@ const store = new Vuex.Store(
       state,
       mutations,
       modules: {
-         position
+         app
       }
       // strict: true
    }
 );
-
 
 export default store;
